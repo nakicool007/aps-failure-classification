@@ -1,0 +1,34 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Local notebook configuration and runtime files
+.ipython/
+.jupyter/
+.matplotlib/
+jupyter-runtime/
+
+# Notebook autosaves (keep the completed notebook and its outputs)
+.ipynb_checkpoints/
+# Keep .ipynb files, saved outputs, and data/ under version control.
+
+# Local editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+*.tmp
+
+# Local secrets
+.env
+.env.*
+!.env.example
