@@ -33,7 +33,7 @@ Open `notebook/Kumbria_Nakul_HW6.ipynb` in VS Code with the Python and Jupyter e
 
 Saved outputs are included in the notebook. Its data loader works when the kernel starts in either the project root or the `notebook/` directory.
 
-Questions 2-4 contain written solutions. Question 5 uses a small dataset defined directly in its code cell and can be run independently. Re-running all of Question 1 takes longer because it includes nested cross-validation and SMOTE on the full APS training set.
+Questions 2-4 contain written solutions. Question 5 uses a small dataset defined directly in its code cell. Run the setup cell first if running Question 5 separately. Question 1 includes five-fold cross-validation and SMOTE on the full APS training set.
 
 ## Dataset
 
@@ -52,13 +52,13 @@ The notebook covers assignment parts **1(a)**, **1(b)(i–v)**, **1(c)**, **1(d)
 - Load and validate the training and test data.
 - Discuss missing-value methods and apply median imputation.
 - Calculate the coefficient of variation for all 170 features using sample standard deviations.
-- Plot the full Pearson correlation matrix and the 12 strongest feature pairs.
+- Plot the full Pearson correlation matrix.
 - Visualize the 13 highest-CV features with a pairwise scatterplot matrix and class-wise boxplots.
 - Report class counts and explain the imbalance and limits of visual feature assessment.
 - Fit a 300-tree random forest without class weighting or resampling, report training and test confusion matrices, ROC curves, AUC, and misclassification rates, and compare out-of-bag error with test error.
 - Research imbalance handling and repeat the forest evaluation with `class_weight="balanced_subsample"`, comparing directly with the unweighted forest.
-- Select XGBoost's L1 regularization strength using five-fold searches and estimate the tuning procedure's error with an outer five-fold validation loop.
-- Repeat the XGBoost experiment with SMOTE inside every fitting fold, then compare confusion matrices, ROC curves, AUC, recall, and errors on the original training and test observations.
+- Select XGBoost's L1 regularization strength using five-fold cross-validation and compare its CV error with the test error.
+- Repeat the XGBoost experiment with SMOTE inside every fitting fold, reporting confusion matrices, ROC curves, AUC, and misclassification rates for the original training and test observations.
 
 ### Question 2: Lasso and the bias-variance trade-off
 
